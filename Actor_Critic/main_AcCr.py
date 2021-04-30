@@ -38,7 +38,7 @@ class ActorCriticNetwork(nn.Module):
         self.input_dims = input_dims
         self.fc1_dims = fc1_dims
         self.fc2_dims = fc2_dims
-        self.n_actions = n_actions
+        self.n_actions = n_actions 
         self.fc1 = nn.Linear(*self.input_dims, self.fc1_dims)
         self.fc2 = nn.Linear(self.fc1_dims, self.fc2_dims)
         self.pi = nn.Linear(self.fc2_dims, n_actions)
@@ -135,8 +135,8 @@ class NewAgent(object):
         self.actor_critic.optimizer.step()
 
 if __name__ == '__main__':
-    agent = NewAgent(alpha=0.00001, input_dims=[17],, gamma=0.99,
-                  n_actions=4, layer1_size=2048, layer2_size=512)
+    agent = NewAgent(alpha=0.00001, input_dims=[17], gamma=0.99,
+                  n_actions=6, layer1_size=2048, layer2_size=512)
 
     env = gym.make('HalfCheetah-v2')
     score_history = []
