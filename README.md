@@ -22,5 +22,5 @@ The main package dependencies are `Mujoco`, `python=3.8`, `gym` and `PyTorch`.
 3) Clone `
 git clone https://github.com/shayantaherian/Reinforcement-learning-Mujoco/.git`
 
- 
- 
+## Testing 
+To test the trained agent, simply run `Test.py` file to see agent behaviour. This code snippet is for DDPG algorithm, however, it can be extended for the other methods simply by loading the main file as well as loading the weights file.
